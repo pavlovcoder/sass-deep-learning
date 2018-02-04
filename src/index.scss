@@ -1,0 +1,105 @@
+//Testing initialization variables in the SASS:
+$formWidth: 49%;
+$floatAlign: left;
+$formTopMar: 7px;
+$formPad: 10px 20px;
+$ageWidth: 20%;
+$passWidth: 50%;
+$clearFloat: left;
+$subBtnBack: hsl(180, 28%, 66%);
+$resBtnBack: hsl(359, 66%, 47%);
+$subBtnColor: #ffffff;
+$subBtnPad: 7px 15px;
+$subBtnCur: pointer;
+
+h2 {
+    background-color: red;
+    color: yellow;
+}
+
+body {
+    margin: 50px;
+}
+
+fieldset form {
+    padding: 20px;
+}
+
+fieldset form input {
+    margin-top: $formTopMar;
+    padding: $formPad;
+}
+
+#fname, #lname {
+    width: $formWidth;
+    float: $floatAlign;
+}
+
+#age {
+    width: $ageWidth;
+    float: $floatAlign;
+}
+
+#pass {
+    width: $passWidth;
+    float: $floatAlign;
+}
+
+#pass {
+    margin-left: 5px;
+}
+
+#lname {
+    margin-left: 5px;
+}
+
+#terms {
+    clear: $floatAlign;
+    width: auto;
+}
+
+.checkBox {
+    float: $floatAlign;
+}
+
+.formBtn {
+    clear: $floatAlign;
+}
+
+#subBtn, #resetBtn {
+    background-color: $subBtnBack;
+    color: $subBtnColor;
+    border: none;
+    padding: $formPad;
+    cursor: $subBtnCur;
+}
+
+#resetBtn {
+    background-color: $resBtnBack;
+}
+
+//Testing nesting functions for organize syntax in the SASS:
+$backMenu : hsl(236, 66%, 76%);
+$aHover : hsl(236, 66%, 66%);
+$aActive : hsl(236, 66%, 35%);
+$aColor : #000000;
+$aColorActive : #ffffff;
+
+.vertical-menu {
+    width: 30%;
+}
+
+div
+    a
+        background-color: $backMenu;
+        color: $aColor;
+        display: block;
+        padding: 12px;
+        text-decoration: none;
+
+    a:hover
+        background-color: $aHover;
+
+    a:active
+        background-color: $aActive;
+        color: $aColorActive;
