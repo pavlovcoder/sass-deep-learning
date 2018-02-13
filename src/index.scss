@@ -12,6 +12,10 @@ $subBtnColor: #ffffff;
 $subBtnPad: 7px 15px;
 $subBtnCur: pointer;
 
+body {
+    font-family: "Lato", sans-serif;
+}
+
 h2 {
     background-color: red;
     color: yellow;
@@ -82,24 +86,36 @@ fieldset form input {
 $backMenu : hsl(236, 66%, 76%);
 $aHover : hsl(236, 66%, 66%);
 $aActive : hsl(236, 66%, 35%);
-$aColor : #000000;
+$aColor : #ffffff;
 $aColorActive : #ffffff;
 
 .vertical-menu {
     width: 30%;
 }
 
-div
-    a
+.vertical-menu {
+    margin-top: 20px;
+    border: 4px double $aActive;
+    a {
         background-color: $backMenu;
         color: $aColor;
         display: block;
-        padding: 12px;
+        padding: 12px 20px;
         text-decoration: none;
+    }
 
-    a:hover
+    a:hover {
         background-color: $aHover;
+        outline: 4px solid $aActive;
+    }
 
-    a:active
+    a:active {
         background-color: $aActive;
         color: $aColorActive;
+    }
+}
+
+//Customization side-navigation panel:
+@import 'main';
+@import 'sidenav';
+@import 'rwd';
