@@ -1,0 +1,41 @@
+$sidenavBack : hsl(236, 66%, 35%);
+$sidenavCol : #cccccc;
+$sidenavColHov : #ffffff;
+$backAnimationColor : #f6f6f6;
+
+.sidenav-panel {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background-color: $sidenavBack;
+    overflow-x: hidden;
+    transition: 0.5s linear;
+    -webkit-transition: 0.5s linear;
+    padding-top: 50px;
+}
+
+.sidenav-panel a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: $sidenavCol;
+    display: block;
+    transition: 0.3s linear;
+    -webkit-transition: 0.3s linear;
+}
+
+.sidenav-panel a:hover {
+    color: $sidenavColHov;
+}
+
+.sidenav-panel .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 30px;
+    margin-left: 50px;
+}
+
