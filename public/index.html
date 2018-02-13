@@ -4,34 +4,96 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../src/index.css" />
+    <link rel="stylesheet" href="../src/country-selector/countrySelect.css"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     <title>First Testing Project</title>
 </head>
 <body>
-    <fieldset class="basic-form">
-        <legend>Basic testing form</legend>
-        <form>
-            <input type="text" id="fname" placeholder="Your name" />
-            <input type="text" id="lname" placeholder="Your surname" />
-            <input type="number" id="age" placeholder="Your age" />
-            <input type="password" id="pass" placeholder="Your password consist of 10 symbols A-Z, 0-9" />
-            <p class="checkBox"><input type="checkbox" id="terms"/> I agree with Terms & Service restrictions</p>
-            <div class="formBtn">
-                <input type="submit" value="Submit" id="subBtn"/>
-                <input type="reset" id="resetBtn"/>
-            </div>
-        </form>
-    </fieldset>
+    <div class="main">
+        <span class="sidenav-btn">&#9776;</span>
+        <fieldset class="basic-form">
+                <legend>Basic testing form</legend>
+                <form>
+                    <input type="text" id="fname" placeholder="Your name" />
+                    <input type="text" id="lname" placeholder="Your surname" />
+                    <input type="number" id="age" placeholder="Your age" />
+                    <input type="password" id="pass" placeholder="Your password consist of 10 symbols A-Z, 0-9" />
+                    <br/>
+                    <p class="checkBox"><input type="checkbox" id="terms"/> I agree with Terms & Service restrictions</p>
+                    <div class="formBtn">
+                        <input type="submit" value="Submit" id="subBtn"/>
+                        <input type="reset" id="resetBtn"/>
+                    </div>
+                </form>
+            </fieldset>
+        
+        <div class="vertical-menu">
+            <a href="#" class="active">Home</a>
+            <a href="#">Tables</a>
+            <a href="#">Calculate</a>
+            <a href="#">Rules</a>
+            <a href="#">Service</a>
+            <a href="#">Help</a>
+            <a href="#">Sign In</a>
+        </div>
 
-    <div class="vertical-menu">
-        <a href="#" class="active">Home</a>
+        <!-- Form created with using SASS - mixins -->
+        <div class="bio-form">
+            <form action="#">
+                <div class="row">
+                    <div class="col-25">
+                        <label for="fname">First Name</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="fname" name="firstname" placeholder="Mell">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="lname">Last Name</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="lname" name="lastname" placeholder="Gibson">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="country">Country</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="country" name="country">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="age">Age</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="range" min="16" max="120"
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- Side-navigation panel with opacity: -->
+    <div class="sidenav-panel" id="sidenav">
+        <a href="#" class="closebtn">&times;</a>
+        <a href="#">About</a>
         <a href="#">Tables</a>
         <a href="#">Calculate</a>
         <a href="#">Rules</a>
         <a href="#">Service</a>
         <a href="#">Help</a>
-        <a href="#">Sign In</a>
     </div>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="../src/country-selector/countrySelect.min.js"></script>
     <script src="/src/index.js"></script>
+    <script>
+        $(#country).countrySelect();
+    </script>
 </body>
 </html>
